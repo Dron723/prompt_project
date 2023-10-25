@@ -49,18 +49,14 @@ function MyProfile() {
 
   return (
     <>
-      {session?.user.id ? (
-        <Profile
-          name="My"
-          desc="Welcome to your personalized profile page"
-          data={posts}
-          noItem={posts.length === 0 ? "true" : "false"}
-          handleEdit={handleEdit}
-          handleDelete={handleDelete}
-        />
-      ) : (
-        router.push("/")
-      )}
+      <Profile
+        name="My"
+        desc="Welcome to your personalized profile page"
+        data={posts}
+        noItem={posts.length === 0 ? "true" : "false"}
+        handleEdit={handleEdit}
+        handleDelete={handleDelete}
+      />
     </>
   );
 }
